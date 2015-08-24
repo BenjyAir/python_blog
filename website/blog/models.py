@@ -10,9 +10,8 @@ class Article(models.Model):
     content = models.TextField(blank=True, null=True)
 
 
-
     def __str__(self):
-        return 'title--%s' % self.title
+        return '%s--%s' % (self.date, self.title, )
 
     class Meta:
         ordering = ['-date']

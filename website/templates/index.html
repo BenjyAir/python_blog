@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% load custom_markdown %}
+{% load text_markdown %}
+{% load date_format %}
 
 {% block content %}
 
@@ -11,15 +12,15 @@
                     <div class="card">
                         <div class="date_label">
                             <div class="day_month">
-                                {{ article.month }}
+                                {{ article.date|date2Month}}
                             </div>
                             <div class="year">
-                                {{ article.year }}
+                                {{ article.date|date2Year}}
                             </div>
                         </div>
                         <h1>{{ article.title }}</h1>
 
-                        {{ article.description|custom_markdown }}
+                        {{ article.description|text_markdown }}
 
 
                         <div class="read_more">

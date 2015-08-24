@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}时间轴{% endblock %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="row-fluid">
+            <div class="span12">
+
+                <div class="card">
+                    {% for k,v in map.items %}
+                         <h3 id="install jekyll-ref">{{ k }}</h3>
+                    <ul>
+                        {% for article in v %}
+                             <li><a href="{% url 'detail' article.id %}">{{ article.date|date:"m-d"}}----{{ article.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
