@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load custom_markdown %}
+
+{% block title %}详情页{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+
+        <div class="row-fluid post-full">
+            <div class="span12 ">
+                <div class="content card">
+                    <div class="date_label">
+                        <div class="day_month">
+                            {{ article.month }}
+                        </div>
+                        <div class="year">
+                            {{ article.year }}
+                        </div>
+                    </div>
+                    <h1>javascript——闭包</h1>
+
+                    {{ article.content|custom_markdown }}
+
+                </div>
+
+                <div class="pagination clearfix">
+                    <ul class="pull-right">
+
+                        <li class="prev"><a class="fa fa-arrow-circle-left"
+                                            href="http://enml.github.io/site/2013/06/12/js-scope"
+                                            title="深入javascript——作用域和闭包"> 前一篇</a></li>
+
+                        <li><a class="fa fa-th" href="http://enml.github.io/site/archive.html"> 所有日志</a></li>
+
+                        <li class="next"><a href="http://enml.github.io/site/2014/04/21/future" title="后智能手机时代">后一篇
+                            <span class="fa fa-arrow-circle-right">  </span></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

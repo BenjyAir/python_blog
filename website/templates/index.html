@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load custom_markdown %}
+
+{% block content %}
+
+    <div class="content">
+
+        <div class="row-fluid">
+            <div class="span12">
+                {% for article in list %}
+                    <div class="card">
+                        <div class="date_label">
+                            <div class="day_month">
+                                {{ article.month }}
+                            </div>
+                            <div class="year">
+                                {{ article.year }}
+                            </div>
+                        </div>
+                        <h1>{{ article.title }}</h1>
+
+                        {{ article.description|custom_markdown }}
+
+
+                        <div class="read_more">
+                            <a class="fa fa-link" href="{% url 'detail' article.id %}"> 查看全文…</a>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer_top %}
+    <div>
+        <a style="font-size:20px;font-family:&#39;幼圆&#39;;padding:10px;width:300px;display:block;margin:50px auto;text-align:center;"
+           href="{% url 'archive' %}">查看更多文章 &gt;&gt;&gt;</a></div>
+{% endblock %}
+

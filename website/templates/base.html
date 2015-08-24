@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>{% block title %}KokerWang's Blog {% endblock %}</title>
+
+    <meta name="author" content="KokerWang">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="http://enml.github.io/site/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css"
+          rel="stylesheet">
+    <link href="/static/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/static/css/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/static/js/prettify.js"></script>
+    <script src="/static/js/scrollHandler.js" defer="true"></script>
+
+
+    <!-- atom & rss feed -->
+    {#    <link href="http://enml.github.io/site/atom.xml" type="application/atom+xml" rel="alternate"#}
+    {#          title="Sitewide ATOM Feed">#}
+    {#    <link href="http://enml.github.io/site/rss.xml" type="application/rss+xml" rel="alternate"#}
+    {#          title="Sitewide RSS Feed">#}
+
+    <!--    font-awesome-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+
+<body onload="prettyPrint()" style="background-position: 0px 5078.33333333333px;">
+
+{% block nav %}
+
+<div class="navbar scrollChange">
+    <div class="navbar-inner">
+        <div class="nav-narrow scrollChange">
+            <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">KokerWang's Blog</span></a>
+            <ul class="nav">
+
+                <li><a href="{% url 'about' %}">关于我</a></li>
+
+
+                <li><a href="{% url 'archive' %}">时间轴</a></li>
+
+
+                <li><a href="{% url 'category' %}">分类</a></li>
+
+
+                <li><a href="{% url 'tag' %}">标签</a></li>
+
+
+                <li><a href="{% url 'reading' %}">读书</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<div class="container-narrow">
+    {% block content %}
+
+        <div class="content">
+
+            <div class="row-fluid post-full">
+                <div class="span12 ">
+                    <div class="content card">
+                        <div class="date_label">
+                            <div class="day_month">
+                                06/14
+                            </div>
+                            <div class="year">
+                                2013
+                            </div>
+                        </div>
+                        <h1>javascript——闭包</h1>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                        <p>javascript——闭包 哈哈哈</p>
+
+                    </div>
+
+                    <div class="pagination clearfix">
+                        <ul class="pull-right">
+
+                            <li class="prev"><a class="fa fa-arrow-circle-left"
+                                                href="http://enml.github.io/site/2013/06/12/js-scope"
+                                                title="深入javascript——作用域和闭包"> 前一篇</a></li>
+
+                            <li><a class="fa fa-th" href="http://enml.github.io/site/archive.html"> 所有日志</a></li>
+
+                            <li class="next"><a href="http://enml.github.io/site/2014/04/21/future" title="后智能手机时代">后一篇
+                                <span class="fa fa-arrow-circle-right">  </span></a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    {% endblock %}
+
+    {% block footer_top %} {% endblock %}
+
+    {% block footer %}
+    <footer class="card clearfix">
+        <span style="font-size:30px;" class="fa fa-github pull-left"></span><a
+            href="https://github.com/enml/blog/tree/jekyll-blog"
+            style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
+
+        <p class="pull-right">© 2015 KokerWang
+            with help from <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+
+    </footer>
+    {% endblock %}
+
+</div>
+
+</body>
+</html>
