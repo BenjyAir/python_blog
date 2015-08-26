@@ -15,3 +15,18 @@ class Article(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    isJD = models.BooleanField(blank= False, null=False, default=True)
+    jdId = models.CharField(max_length=20, blank=True, null=True)
+    date = models.DateField()
+    url = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+    # class Meta:
+    #     ordering = ['-date']
+

@@ -6,7 +6,17 @@
 
     <title>{% block title %}KokerWang{% endblock %}</title>
 
-    <meta name="author" content="KokerWang">
+    {#    <meta name="viewport"#}
+    {#          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">#}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href=" /static/kokerwang.ico"/>
+    <link rel="bookmark" href="/static/kokerwang.ico"/>
+    <meta name="keywords" content="android,Open Source,kokerwang,swift"/>
+    <meta name="author" content="KokerWang"/>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="我大步走大步跑，我没有追我不会累">
+    <link rel="canonical" href="http://www.kokerwang.com/">
+
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,31 +52,31 @@
 
 {% block nav %}
 
-<div class="navbar scrollChange">
-    <div class="navbar-inner">
-        <div class="nav-narrow scrollChange">
-            <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">KokerWang's Blog</span></a>
-            <ul class="nav">
+    <div class="navbar scrollChange">
+        <div class="navbar-inner">
+            <div class="nav-narrow scrollChange">
+                <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">KokerWang's Blog</span></a>
+                <ul class="nav">
 
-                <li><a href="{% url 'about' %}">关于我</a></li>
-
-
-                <li><a href="{% url 'archive' %}">时间轴</a></li>
+                    <li><a href="{% url 'about' %}">关于我</a></li>
 
 
-                <li><a href="{% url 'category' %}">分类</a></li>
+                    <li><a href="{% url 'archive' %}">时间轴</a></li>
 
 
-                <li><a href="{% url 'tag' %}">标签</a></li>
+                    <li><a href="{% url 'category' %}">分类</a></li>
 
 
-                <li><a href="{% url 'reading' %}">读书</a></li>
+                    <li><a href="{% url 'tag' %}">标签</a></li>
 
 
-            </ul>
+                    <li><a href="{% url 'reading' %}">读书</a></li>
+
+
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
 
@@ -158,16 +168,16 @@
     {% block footer_top %} {% endblock %}
 
     {% block footer %}
-    <footer class="card clearfix">
-        <span style="font-size:30px;" class="fa fa-github pull-left"></span><a
-            href="https://github.com/KokerWang/python_blog"
-            style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
+        <footer class="card clearfix">
+            <span style="font-size:30px;" class="fa fa-github pull-left"></span><a
+                href="https://github.com/KokerWang/python_blog"
+                style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
 
-        <p class="pull-right">© 2015 KokerWang
-            with help from <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
+            <p class="pull-right">© 2015 KokerWang
+                with help from <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+            </p>
 
-    </footer>
+        </footer>
     {% endblock %}
 
 </div>

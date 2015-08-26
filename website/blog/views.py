@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from blog.models import Article
+from blog.models import *
 
 
 # from django.http import Http404
@@ -73,14 +73,33 @@ def archive(request):
     if i == (len(list) - 1) and len(ls) != 0:
         m[cacheStr] = ls
         ls = []
-
-    print(m.keys())
     return render(request, 'archive.html', {'map': m})
 
 
 def reading(request):
-    return render(request, 'tag.html')
+    list = Book.objects.all()
+    cacheStr = ''
+    ls = []
+    m = {}
+    for i, l in enumerate(list):
+        sp = str(l.date).split("-")
+        if i == 0:
+            cacheStr = sp[0]
+            ls.append(l)
+        else:
+            if cacheStr == sp[0]:
+                ls.append(l)
+            else:
+                m[cacheStr] = ls
+                ls = []
+                ls.append(l)
+                cacheStr = sp[0]
+
+    if i == (len(list) - 1) and len(ls) != 0:
+        m[cacheStr] = ls
+        ls = []
+    return render(request, 'reading.html', {'map': m})
 
 
 def about(request):
-    return render(request, 'tag.html')
+    return render(request, 'about.html')

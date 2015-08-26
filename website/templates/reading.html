@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}读书{% endblock %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="row-fluid">
+            <div class="span12">
+
+                <div class="card">
+                    {% for k,v in map.items %}
+                         <h3 id="install jekyll-ref">{{ k }}</h3>
+                    <ul>
+                        {% for book in v %}
+                            {% if book.isJ %}
+                                <li><a href="http://item.jd.com/{{ book.jdId }}.html">{{ book.date|date:"m-d"}}&nbsp;&nbsp;&nbsp;&nbsp;{{ book.title }}</a></li>
+                            {% else %}
+                                <li><a href="{{ book.url }}">{{ book.date|date:"m-d"}}&nbsp;&nbsp;&nbsp;&nbsp;{{ book.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
